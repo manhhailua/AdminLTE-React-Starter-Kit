@@ -20,7 +20,7 @@ async function copy({ watch } = {}) {
   const ncp = Promise.promisify(require('ncp'));
 
   await Promise.all([
-    ncp('node_modules/admin-lte', 'src/public/AdminLTE'),
+    ncp('node_modules/admin-lte', 'build/public/AdminLTE'),
     ncp('src/public', 'build/public'),
     ncp('src/content', 'build/content'),
   ]);
