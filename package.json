@@ -5,6 +5,7 @@
     "npm": ">=3.3 <4"
   },
   "dependencies": {
+    "admin-lte": "^2.3.6",
     "babel-polyfill": "6.9.1",
     "babel-runtime": "6.9.2",
     "bluebird": "3.4.0",
