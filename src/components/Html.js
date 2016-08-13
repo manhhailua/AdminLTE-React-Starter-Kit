@@ -24,9 +24,7 @@ function Html({title, description, style, script, children}) {
       }}
     />
     }
-    {analytics.google.trackingId &&
-    <script src="https://www.google-analytics.com/analytics.js" async defer/>
-    }
+    {analytics.google.trackingId && <script src="https://www.google-analytics.com/analytics.js" async defer/>}
     </body>
     </html>
   );

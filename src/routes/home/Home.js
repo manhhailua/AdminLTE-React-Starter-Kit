@@ -15,6 +15,7 @@ const title = 'React Starter Kit';
 
 function Home({news}, context) {
   context.setTitle(title);
+
   return (
     <div className={s.root}>
       <div className={s.container}>
