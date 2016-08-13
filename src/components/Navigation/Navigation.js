@@ -7,13 +7,13 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Navigation.css';
 import Link from '../Link';
 
-function Navigation({ className }) {
+function Navigation({className}) {
   return (
     <div className={cx(s.root, className)} role="navigation">
       <Link className={s.link} to="/about">About</Link>

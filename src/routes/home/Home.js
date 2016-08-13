@@ -7,13 +7,13 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
 const title = 'React Starter Kit';
 
-function Home({ news }, context) {
+function Home({news}, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
@@ -25,7 +25,7 @@ function Home({ news }, context) {
               <a href={item.link} className={s.newsTitle}>{item.title}</a>
               <span
                 className={s.newsDesc}
-                dangerouslySetInnerHTML={{ __html: item.contentSnippet }}
+                dangerouslySetInnerHTML={{__html: item.contentSnippet}}
               />
             </li>
           ))}
@@ -35,13 +35,13 @@ function Home({ news }, context) {
   );
 }
 
-Home.propTypes = {
+Home.propTypes    = {
   news: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     contentSnippet: PropTypes.string,
   })).isRequired,
 };
-Home.contextTypes = { setTitle: PropTypes.func.isRequired };
+Home.contextTypes = {setTitle: PropTypes.func.isRequired};
 
 export default withStyles(s)(Home);

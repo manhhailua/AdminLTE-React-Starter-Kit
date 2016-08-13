@@ -15,7 +15,7 @@ export default {
 
   path: '*',
 
-  async action({ path }) { // eslint-disable-line react/prop-types
+  async action({path}) { // eslint-disable-line react/prop-types
     const resp = await fetch('/graphql', {
       method: 'post',
       headers: {
@@ -28,7 +28,7 @@ export default {
       credentials: 'include',
     });
     if (resp.status !== 200) throw new Error(resp.statusText);
-    const { data } = await resp.json();
+    const {data} = await resp.json();
     if (!data || !data.content) return undefined;
     return <Content {...data.content} />;
   },
