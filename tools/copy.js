@@ -16,12 +16,14 @@ import pkg from '../package.json';
  * Copies static files such as robots.txt, favicon.ico to the
  * output (build) folder.
  */
-async function copy({ watch } = {}) {
+async function copy({watch} = {}) {
   const ncp = Promise.promisify(require('ncp'));
 
   await Promise.all([
     ncp('node_modules/admin-lte', 'build/public/AdminLTE'),
     ncp('src/public', 'build/public'),
+    ncp('node_modules/font-awesome', 'build/public/assets/font-awesome'),
+    ncp('node_modules/ionicons', 'build/public/assets/ionicons'),
     ncp('src/content', 'build/content'),
   ]);
 
@@ -39,7 +41,7 @@ async function copy({ watch } = {}) {
       gaze('src/content/**/*.*', (err, val) => err ? reject(err) : resolve(val));
     });
 
-    const cp = async (file) => {
+    const cp = async(file) => {
       const relPath = file.substr(path.join(__dirname, '../src/content/').length);
       await ncp(`src/content/${relPath}`, `build/content/${relPath}`);
     };
