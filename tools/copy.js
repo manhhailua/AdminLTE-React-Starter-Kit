@@ -22,8 +22,9 @@ async function copy({watch} = {}) {
   await Promise.all([
     ncp('node_modules/admin-lte', 'build/public/AdminLTE'),
     ncp('src/public', 'build/public'),
-    ncp('node_modules/font-awesome', 'build/public/assets/font-awesome'),
-    ncp('node_modules/ionicons', 'build/public/assets/ionicons'),
+    ncp('src/public/plugins', 'build/public/plugins'),
+    ncp('node_modules/font-awesome', 'build/public/plugins/font-awesome'),
+    ncp('node_modules/ionicons', 'build/public/plugins/ionicons'),
     ncp('src/content', 'build/content'),
   ]);
 

@@ -11,15 +11,15 @@ function Html({title, description, style, script, children}) {
       <meta name="description" content={description}/>
       <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
       <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-      <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="/AdminLTE/bootstrap/css/bootstrap.min.css"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
-      <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.css"/>
+      <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css"/>
       {/*<!-- AdminLTE Skins. We have chosen the skin-blue for this starter
        page. However, you can choose any other skin. Make sure you
        apply the skin class to the body tag so the changes take effect.
        -->*/}
-      <link rel="stylesheet" href="/AdminLTE/dist/css/skins/skin-blue.css"/>
+      <link rel="stylesheet" href="/AdminLTE/dist/css/skins/skin-blue.min.css"/>
       {/*<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->*/}
       {/*<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->*/}
       {/*<!--[if lt IE 9]>
