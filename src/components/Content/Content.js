@@ -4,7 +4,7 @@ import s from './Content.css';
 
 function Header() {
   return (
-    <div className="content-wrapper" style={{minHeight: 1048 + 'px'}}>
+    <div className="content-wrapper" style={{minHeight: '1048px'}}>
       {/*<!-- Content Header (Page header) -->*/}
       <section className="content-header">
         <h1>

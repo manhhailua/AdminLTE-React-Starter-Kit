@@ -116,7 +116,7 @@ function Header() {
                         {/*<!-- The progress bar -->*/}
                         <div className="progress xs">
                           {/*<!-- Change the css width attribute to simulate progress -->*/}
-                          <div className="progress-bar progress-bar-aqua" style={{width: 20 + '%'}} role="progressbar"
+                          <div className="progress-bar progress-bar-aqua" style={{width: '20%'}} role="progressbar"
                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                             <span className="sr-only">20% Complete</span>
                           </div>

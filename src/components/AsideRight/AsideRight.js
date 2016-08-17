@@ -43,7 +43,7 @@ function Header() {
                 </h4>
 
                 <div className="progress progress-xxs">
-                  <div className="progress-bar progress-bar-danger" style={{width: 70 + '%'}}></div>
+                  <div className="progress-bar progress-bar-danger" style={{width: '70%'}}></div>
                 </div>
               </a>
             </li>
