@@ -26,7 +26,7 @@ import passport from './core/passport';
 import models from './data/models';
 import schema from './data/schema';
 import routes from './routes';
-import scripts from './js'; // eslint-disable-line import/no-unresolved
+import assets from './assets'; // eslint-disable-line import/no-unresolved
 import {port, auth} from './config';
 
 const app = express();
@@ -86,7 +86,7 @@ app.get('*', async(req, res, next) => {
   try {
     let css        = new Set();
     let statusCode = 200;
-    const data     = {title: '', description: '', style: '', script: scripts.main.js, children: ''};
+    const data     = {title: '', description: '', style: '', script: assets.main.js, children: ''};
 
     await UniversalRouter.resolve(routes, {
       path: req.path,
