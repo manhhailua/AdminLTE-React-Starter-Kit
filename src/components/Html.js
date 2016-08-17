@@ -12,8 +12,8 @@ function Html({title, description, style, script, children}) {
       <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
       <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
       <link rel="stylesheet" href="/AdminLTE/bootstrap/css/bootstrap.min.css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+      <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css"/>
+      <link rel="stylesheet" href="/assets/plugins/ionicons/dist/css/ionicons.min.css"/>
       <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css"/>
       {/*<!-- AdminLTE Skins. We have chosen the skin-blue for this starter
        page. However, you can choose any other skin. Make sure you
