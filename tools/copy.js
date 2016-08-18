@@ -19,15 +19,16 @@ import pkg from '../package.json';
 async function copy({watch} = {}) {
   const ncp = Promise.promisify(require('ncp'));
 
-  await Promise.all([
-    ncp('node_modules/admin-lte', 'build/public/AdminLTE'),
-    ncp('src/public', 'build/public'),
-    ncp('src/public/assets', 'build/public/assets'), // Ensure 'assets' existed
-    ncp('src/public/assets/plugins', 'build/public/assets/plugins'), // Ensure 'assets/plugins' existed
-    ncp('node_modules/font-awesome', 'build/public/assets/plugins/font-awesome'),
-    ncp('node_modules/ionicons', 'build/public/assets/plugins/ionicons'),
-    ncp('src/content', 'build/content'),
-  ]);
+  await Promise
+    .all([
+      ncp('src/public', 'build/public'),
+      ncp('src/content', 'build/content'),
+      ncp('node_modules/admin-lte', 'build/public/AdminLTE'),
+    ]).then(() => {
+      // "/src/public/assets/plugins" must be existed before doing this step
+      ncp('node_modules/font-awesome', 'build/public/assets/plugins/font-awesome');
+      ncp('node_modules/ionicons', 'build/public/assets/plugins/ionicons');
+    });
 
   await fs.writeFile('./build/package.json', JSON.stringify({
     private: true,
