@@ -1,31 +1,36 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Content.css';
 
-function Header() {
-  return (
-    <div className="content-wrapper" style={{minHeight: '1048px'}}>
-      {/*<!-- Content Header (Page header) -->*/}
-      <section className="content-header">
-        <h1>
-          Page Header
-          <small>Optional description</small>
-        </h1>
-        <ol className="breadcrumb">
-          <li><a href="#"><i className="fa fa-dashboard"></i> Level</a></li>
-          <li className="active">Here</li>
-        </ol>
-      </section>
+class Content extends Component {
 
-      {/*<!-- Main content -->*/}
-      <section className="content">
+  static propTypes = {
+    elements: PropTypes.element.isRequired
+  };
 
-        {/*<!-- Your Page Content Here -->*/}
+  render() {
+    return (
+      <div className="content-wrapper" style={{minHeight: '1048px'}}>
+        {/*<!-- Content Header (Page header) -->*/}
+        <section className="content-header">
+          <h1>
+            Page Header
+            <small>Optional description</small>
+          </h1>
+          <ol className="breadcrumb">
+            <li><a href="#"><i className="fa fa-dashboard"></i> Level</a></li>
+            <li className="active">Here</li>
+          </ol>
+        </section>
 
-      </section>
-      {/*<!-- /.content -->*/}
-    </div>
-  );
+        {/*<!-- Main content -->*/}
+        <section className="content">
+          {this.props.elements}
+        </section>
+        {/*<!-- /.content -->*/}
+      </div>
+    );
+  }
 }
 
-export default withStyles(s)(Header);
+export default withStyles(s)(Content);

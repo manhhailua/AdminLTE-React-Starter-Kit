@@ -15,7 +15,6 @@ import home from './home';
 import contact from './contact';
 import login from './login';
 import register from './register';
-import content from './content';
 import error from './error';
 
 // AdminLTE
@@ -36,7 +35,6 @@ export default {
     starter,
 
     // place new routes before...
-    content,
     error,
   ],
 

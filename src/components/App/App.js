@@ -57,7 +57,7 @@ class App extends Component {
       <div>
         <Header />
         <AsideLeft />
-        <Content>{this.props.children}</Content>
+        <Content elements={this.props.children}/>
         <AsideRight />
         <Footer />
       </div>
